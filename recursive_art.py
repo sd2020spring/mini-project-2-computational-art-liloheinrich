@@ -11,9 +11,9 @@ import math
 def_x_size, def_y_size = 350, 350
 def_min_depth, def_max_depth = 7, 9
 def_num_images, def_index = 1, 0
-def_art_name = 'myart'
-def_func_name = 'myfunc'
-def_rep_name = 'recreated'
+def_art_name = 'output/myart'
+def_func_name = 'output/myfunc'
+def_rep_name = 'output/recreated'
 def_save = True
 
 # arrays of the functions listed as tuples of string and lambda representation
@@ -329,7 +329,7 @@ if __name__ == '__main__':
     doctest.testmod()
 
     # Test that PIL is installed correctly
-    test_image("noise.png")
+    test_image("output/noise.png")
 
     # Create some computational art
     generate_multi_art(num_images=3)

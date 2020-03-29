@@ -1,12 +1,19 @@
-# ComputationalArt
- Base repository for Mini Project 2: Computational Art
+# Computational Art
+ Repository for Mini Project 2: Computational Art
 
 Run **recursive_art.py** to generate art.  
+See **[reflection](reflection.md)** for more details.  
 
-In the main function at the end of the file, the user can:
-- run generate_art which will generate an image and function file based on the given parameters
-- run generate_multi_art which will generate_art 'num_images' number of times, labeling the images sequentially
-- run regenerate_art which will regenerate an image from a specified text file (unfortunately pretty slow)  
+Examples:  
+<img src="gallery/myart0.png" width="300"> <img src="gallery/myart1.png" width="300"> <img src="gallery/myart5.png" width="300">  
+<img src="gallery/myart10.png" width="300"> <img src="gallery/myart13.png" width="300"> <img src="gallery/myart16.png" width="300">  
+<img src="gallery/myart19.png" width="300"> <img src="gallery/myart21.png" width="300"> <img src="gallery/myart24.png" width="300">  
+
+In the main function at the end of the file, the user can call these functions:
+
+    generate_art which: generate an image and corresponding function file based on the given parameters
+    generate_multi_art: generate_art 'num_images' number of times, labeling the images sequentially
+    regenerate_art: regenerate an image from a specified function file (unfortunately pretty slow)  
 
 Currently, it creates three images and reproduces the middle one. Example run output included.  
 
