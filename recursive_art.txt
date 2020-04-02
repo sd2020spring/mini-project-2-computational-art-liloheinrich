@@ -1,0 +1,207 @@
+Help on module recursive_art:
+
+NAME
+    recursive_art - ComputationalArt project for Software Design Spring 2020
+
+DESCRIPTION
+    @author: Lilo Heinrich
+
+FUNCTIONS
+    build_random_function(min_depth, max_depth)
+        Builds a random function of depth at least min_depth and at most max_depth.
+
+        Args:
+            min_depth: the minimum depth of the random function
+            max_depth: the maximum depth of the random function
+
+        Returns:
+            The randomly generated function represented as both a lambda and
+            as a nested list.
+
+    build_random_function_helper(depth)
+        Helper function which recurses to build a random function.
+
+        Args:
+            depth: the depth of the random function
+
+        Returns:
+            The randomly generated function represented both as a lamda and
+            as a nested list.
+
+    color_map(val)
+        Maps input value between -1 and 1 to an integer 0-255,
+        suitable for use as an RGB color code.
+
+        Args:
+            val: value to remap, must be a float in the interval [-1, 1]
+        Returns:
+            An integer in the interval [0,255]
+
+        Examples:
+            >>> color_map(-1.0)
+            0
+            >>> color_map(1.0)
+            255
+            >>> color_map(0.0)
+            127
+            >>> color_map(0.5)
+            191
+
+    evaluate_random_function(f, x, y, lambdas)
+        Evaluate the random function f with inputs x,y.
+        The representation of the function f is defined in the assignment write-up.
+
+        Args:
+            f: function to evaluate as either the list and lambda form
+            x: the value of x to be used to evaluate the function
+            y: the value of y to be used to evaluate the function
+            lambdas: boolean whether to use lambda or list form of functions
+
+        Returns:
+            The function value
+
+        Examples:
+            >>> evaluate_random_function(['x'],-0.5, 0.75, False)
+            -0.5
+            >>> evaluate_random_function(['y'],0.1,0.02, False)
+            0.02
+            >>> evaluate_random_function(['-y'],0.5,1.0, False)
+            -1.0
+            >>> evaluate_random_function(['prod'],0.25,0.5, False)
+            0.125
+            >>> evaluate_random_function((lambda x,y: (x+y)/2),0.25,0.5, True)
+            0.375
+
+    generate_art(filename='output/myart', min_depth=7, max_depth=9, x_size=350, y_size=350, write_funcs=True, func_filename='output/myfunc')
+        Generate computational art and save as an image file. Optionally save
+        the corresponding function file.
+
+        Args:
+            filename: optional arg filename for image (default: "myart")
+            min_depth, max_depth: optional args to set function depth (default: [7, 9])
+            lambdas: optional arg whether to use lambda functions (default: False)
+            x_size, y_size: optional args to set image dimensions (default: 350)
+            write_funcs: optional arg to print out functions in string format
+            func_filename: optional arg filename for function (default: "myfunc")
+
+    generate_multi_art(filename='output/myart', min_depth=7, max_depth=9, x_size=350, y_size=350, write_funcs=True, func_filename='output/myfunc', num_images=1, index=0)
+        Generate multiple computational art and save all as sequential image files.
+
+        Args:
+            filename: optional arg filename for image (default: "myart")
+            min_depth, max_depth: optional args to set function depth (default: [7, 9])
+            x_size, y_size: optional args to set image dimensions (default: 350)
+            write_funcs: optional arg to print out functions in string format,
+                    default is True because they are useful
+            func_filename: optional arg filename for function (default: "myfunc")
+            num_images: optional arg how many images to generate, (default: 1)
+            index: starting index to label images from, (default: 0)
+
+    make_art(functions, filename, lambdas, x_size=350, y_size=350)
+        Generate computational art from functions and save as an image file. Can
+        specify the input functions, including ones that were already generated and
+        recorded, to recreate images.
+
+        Args:
+            functions: the array of three sets of functions to recreate the image from
+            filename: optional arg string filename for image (default: "recreated")
+            lambdas: optional arg whether to use lambda functions (default: False)
+            x_size, y_size: optional args to set image dimensions (default: 350)
+
+    parse_line(line)
+        Takes in one line as a string from a function file, parses it into tokens,
+        and reconstructs the original nested list using a helper function.
+
+        Args:
+            line: a string of one line of a function file
+
+        Returns:
+            list: the nested list version of line
+
+    parse_line_helper(arr, tok)
+        Modifies the nested list that is referenced through the parameter arr to
+        repopulate the nested list with the tokens given using recursive backtracking.
+        Does not return anything, instead modifying sections of the tree through arr.
+
+        Args:
+            arr: the array of the level on the tree, starting at the top and moving down
+            tok: an array of tokens such as 'avg' which represent the building block functions
+
+    read_func(filename='output/myfunc', index=0)
+        Reads in lines from a function file, returning the nested list
+        representation of one function.
+
+        Args:
+            filename: optional arg filename to read from (default: "myfunc")
+            index: the number added to the filename (default: 0)
+
+        Returns:
+            functions: array of nested list representation of three functions
+
+    regenerate_art(filename='output/recreated', x_size=350, y_size=350, func_filename='output/myfunc', index=0)
+        Generate computational art from text file of the nested list representation
+        of functions and save as an image file. Can specify the input functions,
+        including ones that were already generated and recorded, to recreate images.
+
+        Args:
+            functions: the array of three sets of functions to recreate the image from
+            filename: optional arg string filename for image (default: "recreated")
+            x_size, y_size: optional args to set image dimensions (default: 350)
+            func_filename: optional arg filename to read from (default: "myfunc")
+            index: the number added to the filename (default: 0)
+
+    remap_interval(val, in_start, in_end, out_start, out_end)
+        Remap a value from one interval to another.
+        Given an input value in the interval [input_interval_start,
+        input_interval_end], return an output value scaled to fall within
+        the output interval [output_interval_start, output_interval_end].
+
+        Args:
+            val: the value to remap
+            in_start: start of the interval that contains all possible values for val
+            in_end: end of the interval that contains all possible values for val
+            out_start: start of the interval that contains all possible output values
+            out_end: end of the interval that contains all possible output values
+
+        Returns:
+            The value remapped from the input to the output interval
+
+        Examples:
+            >>> remap_interval(0.5, 0, 1, 0, 10)
+            5.0
+            >>> remap_interval(5, 4, 6, 0, 2)
+            1.0
+            >>> remap_interval(5, 4, 6, 1, 2)
+            1.5
+            >>> remap_interval(127.5, 0, 255, 0, 1)
+            0.5
+
+    test_image(filename, x_size=350, y_size=350)
+        Generate a test image with random pixels and save as an image file.
+
+        Args:
+            filename: string filename for image (should be .png)
+            x_size, y_size: optional args to set image dimensions (default: 350)
+
+    write_func(functions, filename='output/myfunc')
+        Writes the functions given as strings into a text file.
+        
+        Args:
+            functions: the functions, in terms of an array of them in nested list format
+            filename: the file name under which to save the functions (default: "myfunc")
+
+DATA
+    def_art_name = 'output/myart'
+    def_func_name = 'output/myfunc'
+    def_index = 0
+    def_max_depth = 9
+    def_min_depth = 7
+    def_num_images = 1
+    def_rep_name = 'output/recreated'
+    def_save = True
+    def_x_size = 350
+    def_y_size = 350
+    funcs = [('prod', <function <lambda>>), ('avg', <function <lambda>>), ...
+
+FILE
+    /home/lilo/SoftwareDesign/Projects/ComputationalArt/recursive_art.py
