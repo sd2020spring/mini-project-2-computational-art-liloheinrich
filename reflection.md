@@ -1,5 +1,8 @@
-Please prepare a short document (~1 paragraph to 1-2 pages) that addresses:
+# Reflection
+## Process
+From a process point of view, I was able to write the base code required for this project fairly easily and quickly. Although, once I was done with that, I set out to add extra challenges inclding programming lambda functions, writing function files, and using function files to recreate images. I never got around to adding color re-mapping options or other function editing abilities, which I would have liked to try to do. I think I made this project more difficult than it had to be because I wanted to add so many extra features.
 
-From a process point of view, what went well? What could you improve? Other possible reflection topics: Was your project appropriately scoped? Did you have a good plan for unit testing? How will you use what you learned going forward? What do you wish you knew before you started that would have helped you succeed?
+In terms of planning out my unit testing, honestly, I usually prefer to just run it as if it works, see where the output differs from expected, and add print statements for debugging. I am not used to using doctests, and am still getting used to them, but I see how they can be a very useful tool for automated code checking.
 
-What are your thoughts on “computational creativity”? Possible reflection topics for this: How creative do you believe you were in making your art? How do you think computational art differs from more traditional art? Who might deserve credit for the creation of your final piece of computational art?
+## Creativity
+I believe that I was creative in making this art. Algorithmically creating images and curating which ones I found aesthetically pleasing or interesting qualifies as being creative and making art to me. This is not all that dissimilar to the job of graphic artists or other artists who use online tools and software, even sometimes pre-made backgrounds and other works as inspiration. I will say that because we were given the framework and a set of base functions for this project that I think the credit does not entirely belong to me, but also to the SofDes Professors who wrote the code that I was working off and whoever who came up with the idea to use nested functions to pixel colors to create images. 
