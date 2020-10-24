@@ -5,9 +5,9 @@ Run **recursive_art.py** to generate art.
 See **[reflection](reflection.md)** for more details.  
 
 Examples:  
-<img src="gallery/myart0.png" width="300"> <img src="gallery/myart1.png" width="200"> <img src="gallery/myart5.png" width="200">  
-<img src="gallery/myart10.png" width="300"> <img src="gallery/myart13.png" width="200"> <img src="gallery/myart16.png" width="200">  
-<img src="gallery/myart19.png" width="300"> <img src="gallery/myart21.png" width="200"> <img src="gallery/myart24.png" width="200">  
+<img src="gallery/myart0.png" width="200"> <img src="gallery/myart1.png" width="200"> <img src="gallery/myart5.png" width="200">  
+<img src="gallery/myart10.png" width="200"> <img src="gallery/myart13.png" width="200"> <img src="gallery/myart16.png" width="200">  
+<img src="gallery/myart19.png" width="200"> <img src="gallery/myart21.png" width="200"> <img src="gallery/myart24.png" width="200">  
 
 In the main function at the end of the file, the user can call these functions:
 
