@@ -11,9 +11,9 @@ Examples:
 
 In the main function at the end of the file, the user can call these functions:
 
-    generate_art which: generate an image and corresponding function file based on the given parameters
+    generate_art: generate an image and corresponding function file based on the given parameters
     generate_multi_art: generate_art 'num_images' number of times, labeling the images sequentially
-    regenerate_art: regenerate an image from a specified function file (unfortunately pretty slow)  
+    regenerate_art: regenerate an image from a specified function file (slow)  
 
 Currently, it creates three images and reproduces the middle one. Example run output included.  
 
