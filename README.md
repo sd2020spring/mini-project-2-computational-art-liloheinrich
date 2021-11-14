@@ -1,7 +1,7 @@
 # Computational Art
  Repository for Mini Project 2: Computational Art
 
-Run **recursive_art.py** to generate art.  
+Run `recursive_art.py` to generate art.  
 See **[reflection](reflection.md)** for more details.  
 
 Examples:  
